@@ -1,52 +1,85 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang='es'>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Service Support Test</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 20px;
-            background-color: #f4f4f4;
-        }
-        header {
-            background-color: #0078d4;
-            color: white;
-            padding: 15px;
-            text-align: center;
-        }
-        main {
-            background: white;
-            padding: 20px;
-            border-radius: 8px;
-            max-width: 600px;
-            margin: 20px auto;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-       ;
-        }
-    </style>
+<meta charset='UTF-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0'>
+<title>InConcert CX - Centro de Soporte Avanzado</title>
+<style>
+/* Estilos generales */
+body {margin:0;font-family:'Segoe UI',sans-serif;background:#121212;color:#e0e0e0;}
+header {background:#1a1a1a;padding:20px;display:flex;justify-content:space-between;align-items:center;}
+header h1 {color:#bb86fc;font-size:1.8rem;}
+nav a {color:#e0e0e0;text-decoration:none;margin:0 15px;font-weight:bold;}
+nav a:hover {color:#bb86fc;}
+.hero {text-align:center;padding:60px;background:linear-gradient(135deg,#6200ea,#bb86fc);color:white;}
+.hero h2 {font-size:2.5rem;margin-bottom:10px;}
+.hero p {font-size:1.2rem;margin-bottom:20px;}
+.cta-button {background:#bb86fc;color:#121212;padding:15px 30px;border-radius:30px;font-size:1.1rem;font-weight:bold;text-decoration:none;transition:0.3s;}
+.cta-button:hover {background:#9965f4;transform:scale(1.05);}
+/* Botón flotante */
+.floating-btn {position:fixed;bottom:30px;right:30px;background:#bb86fc;color:#121212;border:none;border-radius:50%;width:60px;height:60px;font-size:28px;cursor:pointer;box-shadow:0 4px 10px rgba(0,0,0,0.3);}
+.floating-btn:hover {background:#9965f4;}
+/* Animaciones */
+.fade-in {animation:fadeIn 1.2s ease-in;}
+@keyframes fadeIn {from{opacity:0;}to{opacity:1;}}
+/* Modo oscuro toggle */
+.dark-mode {background:#121212;color:#e0e0e0;}
+.light-mode {background:#f9f9f9;color:#333;}
+/* Secciones */
+section {padding:40px;text-align:center;}
+.features-grid {display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px;}
+.feature-card {background:#1a1a1a;padding:20px;border-radius:10px;transition:0.3s;}
+.feature-card:hover {transform:translateY(-5px);box-shadow:0 8px 20px rgba(187,134,252,0.3);}
+footer {background:#1a1a1a;padding:20px;text-align:center;color:#b0b0b0;}
+form {max-width:500px;margin:20px auto;text-align:left;}
+input,textarea {width:100%;padding:10px;margin-bottom:10px;border-radius:6px;border:none;}
+button[type='submit'] {background:#bb86fc;color:#121212;padding:12px;border:none;border-radius:6px;font-weight:bold;cursor:pointer;}
+button[type='submit']:hover {background:#9965f4;}
+</style>
 </head>
-<body>
-    <header>
-        <h1>Prueba de Service Support</h1>
-    </header>
-    <main>
-        <p>Este sitio carga el script para inicializar Webcall. Si todo funciona, el servicio debería estar disponible.</p>
-    </main>
-
-    <!-- Snippet proporcionado -->
-    <script>
-        (function () {
-            const s = document.createElement("script");
-            s.src = "https://s3.eu-west-1.amazonaws.com/livekit.webcall.bundles/channel-bundles/844dda6c-1b10-4913-aac9-960379e34167/4f7975e7-9244-4440-9ded-17ad89ab51c5/4f7975e7-9244-4440-9ded-17ad89ab51c5.bundle.js";
-            s.charset = "UTF-8";
-            s.onload = function () {
-                window.Webcall.init();
-            };
-            document.head.appendChild(s);
-        })();
-    </script>
+<body class='fade-in'>
+<header>
+<h1>InConcert CX</h1>
+<nav>
+<a href='#soluciones'>Soluciones</a>
+<a href='#contacto'>Contacto</a>
+<a href='#faq'>FAQ</a>
+</nav>
+</header>
+<section class='hero'>
+<h2>Transformamos la experiencia del cliente</h2>
+<p>Soluciones omnicanal de contact center en la nube</p>
+<a href='#contacto' class='cta-button'>Solicitar Demo</a>
+</section>
+<section id='soluciones'>
+<h3>Nuestras Soluciones</h3>
+<div class='features-grid'>
+<div class='feature-card'>☁️ Cloud Contact Center</div>
+<div class='feature-card'>🤖 IA Conversacional</div>
+<div class='feature-card'>📊 Analytics</div>
+<div class='feature-card'>💬 Omnicanalidad</div>
+<div class='feature-card'>🔐 Seguridad</div>
+<div class='feature-card'>⚡ Escalabilidad</div>
+</div>
+</section>
+<section id='contacto'>
+<h3>Contáctanos</h3>
+<form>
+<input type='text' placeholder='Nombre' required>
+<input type='email' placeholder='Correo' required>
+<textarea placeholder='Mensaje' rows='4'></textarea>
+<button type='submit'>Enviar</button>
+</form>
+</section>
+<section id='faq'>
+<h3>Preguntas Frecuentes</h3>
+<p>¿Cómo funciona la asistencia? Haz clic en el botón flotante para iniciar.</p>
+</section>
+<footer>© 2025 InConcert CX. Todos los derechos reservados.</footer>
+<button class='floating-btn'>📞</button>
+<!-- Snippet actualizado -->
+<script>
+(function(){const s=document.createElement('script');s.src='https://s3.eu-west-1.amazonaws.com/livekit.webcall.bundles/channel-bundles/844dda6c-1b10-4913-aac9-960379e34167/4f7975e7-9244-4440-9ded-17ad89ab51c5/4f7975e7-9244-4440-9ded-17ad89ab51c5.bundle.js';s.charset='UTF-8';s.onload=function(){window.Webcall.init();};document.head.appendChild(s);})();
+</script>
 </body>
 </html>
