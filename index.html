@@ -3,40 +3,127 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Service Support Test</title>
+    <title>Centro de Soporte Avanzado</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
             margin: 0;
-            padding: 20px;
-            background-color: #f4f4f4;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background-color: #fafafa;
+            color: #333;
         }
         header {
-            background-color: #0078d4;
-            color: white;
-            padding: 15px;
+            background: #fff;
+            padding: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
             text-align: center;
         }
-        main {
-            background: white;
-            padding: 20px;
+        header h1 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+        .search-box {
+            max-width: 500px;
+            margin: 0 auto;
+            display: flex;
+            border: 1px solid #ccc;
             border-radius: 8px;
-            max-width: 600px;
-            margin: 20px auto;
+            overflow: hidden;
+        }
+        .search-box input {
+            flex: 1;
+            padding: 12px;
+            border: none;
+            font-size: 1rem;
+        }
+        .search-box button {
+            background: #0078d4;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            cursor: pointer;
+        }
+        main {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+        .categories {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        .card {
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
             box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-       ;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        .card img {
+            width: 60px;
+            margin-bottom: 15px;
+        }
+        .assist-btn {
+            display: block;
+            margin: 40px auto;
+            background: #0078d4;
+            color: white;
+            padding: 15px 30px;
+            font-size: 1.2rem;
+            border-radius: 8px;
+            text-decoration: none;
+            text-align: center;
+            width: fit-content;
+            transition: background 0.3s ease;
+        }
+        .assist-btn:hover {
+            background: #005a9e;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            font-size: 0.9rem;
+            color: #666;
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>Prueba de Service Support</h1>
+        <h1>Centro de Soporte Avanzado</h1>
+        <div class="search-box">
+            <input type="text" placeholder="Busca tu problema...">
+            <button>Buscar</button>
+        </div>
     </header>
     <main>
-        <p>Este sitio carga el script para inicializar Webcall. Si todo funciona, el servicio debería estar disponible.</p>
+        <h2 style="text-align:center; margin-bottom:30px;">¿En qué podemos ayudarte?</h2>
+        <div class="categories">
+            <div class="card">
+                <img src="https://img.icons8.com/ios-filled/100/0078d4/customer-support.png" alt  <h3>Soporte Técnico</h3>
+                <p>Soluciones rápidas para problemas técnicos.</p>
+            </div>
+            <div class="card">
+                <img src="https://img.icons8.com/ios-filled4/chat.png
+                <h3>Chat en Vivo</h3>
+                <p>Habla con un agente en tiempo real.</p>
+            </div>
+            <div class="card">
+                <img src="https://img.icons8.com/ios-filled//faq.png
+                <h3>Preguntas Frecuentes</h3>
+                <p>Encuentra respuestas a las dudas más comunes.</p>
+            </div>
+        </div>
+        #Iniciar Asistencia Ahora</a>
     </main>
+    <footer>
+        &copy; 2025 Centro de Soporte Avanzado. Todos los derechos reservados.
+    </footer>
 
-    <!-- Snippet proporcionado -->
+    <!-- Snippet para Webcall -->
     <script>
         (function () {
             const s = document.createElement("script");
